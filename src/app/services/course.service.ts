@@ -23,8 +23,19 @@ export class CourseService {
       .pipe(
         timeout(3000),
         catchError(err => {
-          console.log("Error consiguiendo cursos", err);
-          throw new Error("error courses");
+          console.log("error courses", err);
+          throw new Error("Error al conseguir cursos");
+        })
+      );
+  }
+
+  deleteCourse(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`)
+      .pipe(
+        timeout(3000),
+        catchError(err => {
+          console.log(" error delete ", err);
+          throw new Error("Error al eliminar");
         })
       );
   }

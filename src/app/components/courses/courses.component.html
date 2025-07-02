@@ -1,1 +1,29 @@
-<p>courses works!</p>
+<mat-card class="fullscreen-card">
+    <mat-card-header>
+        <mat-card-title class="cardtitle">Perros</mat-card-title>
+        <button routerLink="/add"><mat-icon>add</mat-icon></button>
+    </mat-card-header>
+
+    <mat-card-content class="cardbody">
+        <table>
+            <thead>
+                <tr>
+                    <th>imagen</th>
+                    <th>raza</th>
+                    <th>descripción</th>
+                    <th>acción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @for(course of courses(); track $index) {
+                <tr>
+                    <td>{{course.name}}</td>
+                    <td>{{course.description}}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </mat-card-content>
+
+</mat-card>
