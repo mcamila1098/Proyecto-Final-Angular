@@ -8,7 +8,6 @@ import { Course } from '../../services/course.service';
 
 @Component({
   selector: 'app-coursedialog',
-  standalone: true,
   imports: [
     ReactiveFormsModule,
     MatDialogModule,

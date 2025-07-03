@@ -1,29 +1,23 @@
-<mat-card class="fullscreen-card">
-    <mat-card-header>
-        <mat-card-title class="cardtitle">Perros</mat-card-title>
-        <button routerLink="/add"><mat-icon>add</mat-icon></button>
-    </mat-card-header>
+<section class="courses-grid">
 
-    <mat-card-content class="cardbody">
-        <table>
-            <thead>
-                <tr>
-                    <th>imagen</th>
-                    <th>raza</th>
-                    <th>descripción</th>
-                    <th>acción</th>
-                </tr>
-            </thead>
+  @for(course of courses(); track $index) {
+    <mat-card class="course-card">
+      
+      <img mat-card-image src="https://img.freepik.com/free-vector/software-development-programming-coding-learning-information-technology-courses-it-courses-all-levels-computing-hi-tech-course-concept_335657-191.jpg" alt="Imagen del curso">
 
-            <tbody>
-                @for(course of courses(); track $index) {
-                <tr>
-                    <td>{{course.name}}</td>
-                    <td>{{course.description}}</td>
-                </tr>
-                }
-            </tbody>
-        </table>
-    </mat-card-content>
+      <mat-card-content>
+        <h2>{{ course.name }}</h2>
+        <p>{{ course.description }}</p>
+        <p><strong>Duración:</strong> {{ course.duration }}</p>
+        <p><strong>Nivel:</strong> {{ course.level }}</p>
+        <p><strong>Precio:</strong> ${{ course.price }}</p>
+      </mat-card-content>
 
-</mat-card>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Ver Detalles</button>
+      </mat-card-actions>
+      
+    </mat-card>
+  }
+
+</section>

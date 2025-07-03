@@ -1,12 +1,11 @@
 import { Component, inject,signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
-import { RouterLink } from '@angular/router';
 import { Course, CourseService } from '../../services/course.service';
 
 @Component({
   selector: 'app-courses',
-  imports: [MatCardModule, MatIconModule,RouterLink],
+  imports: [MatCardModule, MatIconModule],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })

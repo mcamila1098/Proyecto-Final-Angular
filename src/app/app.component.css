@@ -1,16 +1,38 @@
-.title {
-    color: aliceblue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    font-size: larger;
-    padding: 10px;
+.mat-toolbar.mat-primary {
+  background-color: #6A1B9A !important; 
+  color: white !important;
 }
 
-footer {
-    background-color: rebeccapurple;
-    color: aliceblue;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: small;
-    padding: 12px 0;
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
 }
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.main-footer, footer {
+  background-color: #BA68C8 !important; /* Lila */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  z-index: 100;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+

@@ -1,11 +1,15 @@
-<mat-toolbar>
-  <a routerLink="/" class="title">Home</a>
-  <a routerLink="/courses" class="title">Cursos</a>
-  <a routerLink="/admindashboard" class="title">Management</a>
+<mat-toolbar color="primary" class="main-toolbar">
+  <span class="logo">CursosTech</span>
+
+  <span class="spacer"></span>
+
+  <a mat-button routerLink="/" routerLinkActive="active-link">Inicio</a>
+  <a mat-button routerLink="/courses" routerLinkActive="active-link">Cursos</a>
+  <a mat-button routerLink="/admindashboard" routerLinkActive="active-link">Administrar</a>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
 
-<footer>
-  <span>2025 Maria Camila</span>
+<footer class="main-footer">
+  <span>© 2025 CursosTech. Todos los derechos reservados.</span>
 </footer>
