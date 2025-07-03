@@ -1,46 +1,69 @@
-.cardtitle{
-    color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bolder;
-    font-size: 30px;
+.admin-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1000px;
 }
 
-.cardbody{
-    color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
-    overflow: auto;
-}
-.fullscreen-card {
-  flex: 1;
+.admin-header {
   display: flex;
-  justify-content: center; 
-  height: 90%;
-  background-color: white;
-  opacity: 0.85;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
+.admin-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #6A1B9A;
+  font-weight: bold;
+}
 
-table {
+.admin-content {
+  overflow-x: auto;
+}
+
+.admin-table {
   width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-th, td {
-  padding: 12px 16px;
+.admin-table th, .admin-table td {
+  padding: 0.8rem 1rem;
   text-align: left;
-  border-right: 2px solid #353333;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-th {
-  background-color: #0e0d0d;
-  color: #f1efef;
+.admin-table th {
+  background-color: #f3e5f5;
+  color: #4A148C;
   font-weight: 600;
-  font-size: 20px;
-  border-bottom: 2px solid #d0d0d0;
 }
 
+.admin-table tr:hover {
+  background-color: #f9f9f9;
+}
 
-img {
-  border-radius: 10px;
+.admin-table td button {
+  margin: 0;
+}
+
+.edit-btn {
+  color: #2196F3; 
+}
+
+.edit-btn:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.delete-btn {
+  color: #D32F2F; 
+}
+
+.delete-btn:hover {
+  background-color: rgba(211, 47, 47, 0.1);
 }
