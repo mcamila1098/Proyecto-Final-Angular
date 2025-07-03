@@ -21,7 +21,7 @@ a {
 }
 
 .main-footer, footer {
-  background-color: #BA68C8 !important; /* Lila */
+  background-color: #BA68C8 !important; 
   position: fixed;
   bottom: 0;
   left: 0;

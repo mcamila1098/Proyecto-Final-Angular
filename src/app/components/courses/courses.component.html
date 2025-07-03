@@ -1,23 +1,46 @@
+<div class="courses-header">
+  <h2>Explora Nuestros Cursos</h2>
+  <p>Aprende nuevas habilidades y mejora tu carrera con nuestros cursos de tecnología</p>
+</div>
+
 <section class="courses-grid">
 
-  @for(course of courses(); track $index) {
-    <mat-card class="course-card">
-      
-      <img mat-card-image src="https://img.freepik.com/free-vector/software-development-programming-coding-learning-information-technology-courses-it-courses-all-levels-computing-hi-tech-course-concept_335657-191.jpg" alt="Imagen del curso">
+    @for(course of courses(); track $index) {
+    <mat-card class="modern-card">
 
-      <mat-card-content>
-        <h2>{{ course.name }}</h2>
-        <p>{{ course.description }}</p>
-        <p><strong>Duración:</strong> {{ course.duration }}</p>
-        <p><strong>Nivel:</strong> {{ course.level }}</p>
-        <p><strong>Precio:</strong> ${{ course.price }}</p>
-      </mat-card-content>
+        <img class="course-image"
+            src="https://img.freepik.com/free-vector/software-development-programming-coding-learning-information-technology-courses-it-courses-all-levels-computing-hi-tech-course-concept_335657-191.jpg"
+            alt="Imagen del curso">
 
-      <mat-card-actions>
-        <button mat-raised-button color="primary">Ver Detalles</button>
-      </mat-card-actions>
-      
+        <mat-card-content>
+            <div class="badges-container">
+                <span class="badge-level" [style.background-color]="
+                    course.level.toLowerCase() === 'principiante' ? '#81C784' :
+                    course.level.toLowerCase() === 'intermedio' ? '#FFD54F' :
+                    course.level.toLowerCase() === 'avanzado' ? '#E57373' : '#BDBDBD'
+                    " [style.color]="course.level.toLowerCase() === 'intermedio' ? '#333' : '#fff'">
+                    {{ course.level }}
+                </span>
+
+                <span class="badge-duration">
+                    {{ course.duration }}
+                </span>
+            </div>
+
+            <h3 class="course-title">{{ course.name }}</h3>
+            <p class="course-description">{{ course.description }}</p>
+
+            <div class="course-footer">
+                <div class="course-author">
+                    <img src="https://randomuser.me/api/portraits/women/71.jpg" alt="Autor">
+                    <span>Instructor: Maricel Perdomo Rojas</span>
+                </div>
+                <span class="course-price">${{ course.price }}</span>
+            </div>
+
+        </mat-card-content>
+
     </mat-card>
-  }
+    }
 
 </section>
