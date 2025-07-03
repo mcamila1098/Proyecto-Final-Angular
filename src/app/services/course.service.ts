@@ -29,13 +29,35 @@ export class CourseService {
       );
   }
 
+  insertCourse(course: Course): Observable<Course> {
+    return this.http.post<Course>(this.baseUrl, course)
+      .pipe(
+        timeout(3000),
+        catchError(err => {
+          console.log("error create course", err);
+          throw new Error("Error al crear curso");
+        })
+      );
+  }
+
+  updateCourse(course: Course): Observable<Course> {
+    return this.http.put<Course>(this.baseUrl, course)
+      .pipe(
+        timeout(3000),
+        catchError(err => {
+          console.log("error update course", err);
+          throw new Error("Error al actualizar curso");
+        })
+      );
+  }
+
   deleteCourse(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`)
       .pipe(
         timeout(3000),
         catchError(err => {
           console.log(" error delete ", err);
-          throw new Error("Error al eliminar");
+          throw new Error("Error al eliminar curso");
         })
       );
   }

@@ -1,39 +1,40 @@
 <mat-card class="fullscreen-card">
-    <mat-card-header>
-        <mat-card-title class="cardtitle">Crear</mat-card-title>
-        <button><mat-icon>add</mat-icon></button>
-    </mat-card-header>
+  <mat-card-header>
+    <mat-card-title class="cardtitle">Administrar Cursos</mat-card-title>
+    <button mat-icon-button color="primary" (click)="createCourse()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-card-header>
 
-    <mat-card-content class="cardbody">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Eliminar</th>
-                    <th>Editar</th>
-                </tr>
-            </thead>
+  <mat-card-content class="cardbody">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Eliminar</th>
+          <th>Editar</th>
+        </tr>
+      </thead>
 
-            <tbody>
-                @for(course of courses(); track $index) {
-                <tr>
-                    <td>{{course.name}}</td>
-                    <td>{{course.description}}</td>
-                    <td>
-                        <button (click)="deleteCourse(course.id)">
-                            <mat-icon>delete</mat-icon>
-                        </button>
-                    </td>
-                    <td>
-                        <button>
-                            <mat-icon>border_color</mat-icon>
-                        </button>
-                    </td>
-                </tr>
-                }
-            </tbody>
-        </table>
-    </mat-card-content>
-
+      <tbody>
+        @for(course of courses(); track $index) {
+        <tr>
+          <td>{{ course.name }}</td>
+          <td>{{ course.description }}</td>
+          <td>
+            <button mat-icon-button color="warn" (click)="deleteCourse(course.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+          <td>
+            <button mat-icon-button color="accent" (click)="editCourse(course)">
+              <mat-icon>border_color</mat-icon>
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </mat-card-content>
 </mat-card>
