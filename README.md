@@ -1,59 +1,27 @@
 # CourseProyect
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+La empresa netec necesita crear un frontend con angular que le permita mostrar cursos a sus clientes. Y un dashboard de administradores que permita editar los cursos que estan disponibles.
 
-## Development server
+## Páginas
 
-To start a local development server, run:
+### Home 🏠
 
-```bash
-ng serve
-```
+![Landing Page](/images/home.png)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Cursos 📚
 
-## Code scaffolding
+![Courses Page](/images/courses.png)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Admin Dashboard ⚙
 
-```bash
-ng generate component component-name
-```
+![Admin Page](/images/admin.png)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Funcionalidades 
 
-```bash
-ng generate --help
-```
+El dashboard de administración de cursos cuenta con formularios modales para crear y editar cursos:
 
-## Building
+![Create Course](/images/newcourse.png)
 
-To build the project run:
+![Edit Course](/images/editcourse.png)
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

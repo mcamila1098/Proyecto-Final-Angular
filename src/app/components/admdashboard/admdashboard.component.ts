@@ -10,7 +10,6 @@ import { CoursedialogComponent } from '../coursedialog/coursedialog.component';
   selector: 'app-admdashboard',
   templateUrl: './admdashboard.component.html',
   styleUrl: './admdashboard.component.css',
-  standalone: true,
   imports: [MatCardModule, MatIconModule, MatButtonModule, MatDialogModule]
 })
 export class AdmdashboardComponent {
